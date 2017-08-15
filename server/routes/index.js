@@ -12,6 +12,10 @@ const storage = diskStorage({
 
 const upload = multer({ storage });
 
+router.get("/", async (ctx, next) => {
+  ctx.body = "Welcome!";
+});
+
 router.post("/image", upload.single("file"), async (ctx, next) => {
   //console.log(ctx.req.body);
   const files = ctx.req.file;
