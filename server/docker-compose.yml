@@ -1,0 +1,7 @@
+webApp:
+  dockerfile: Dockerfile
+  build: .
+  working_dir: .
+  command: npm run dev
+  port:
+    -"3000:3000"

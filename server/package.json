@@ -5,6 +5,7 @@
   "scripts": {
     "start": "babel-node --presets es2015 bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
+    "run dev": "docker-compose -f docker-compose.yml stop && docker-compose -f docker-compose.yml build && docker-compose -f docker-compose.yml up",
     "prd": "pm2 start bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
