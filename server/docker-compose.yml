@@ -1,7 +1,7 @@
-webApp:
+test:
   dockerfile: Dockerfile
   build: .
-  working_dir: .
-  command: npm run dev
+  working_dir: /dockertest
+  command: npm start
   port:
-    -"3000:3000"
+    - "3000:3000"
